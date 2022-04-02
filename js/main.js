@@ -1222,7 +1222,7 @@ function rentalCarCost(d){
          :(d = d * 40);
 
 }
-
+_______________________________________
 
 Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
 
