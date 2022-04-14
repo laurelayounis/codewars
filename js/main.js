@@ -516,16 +516,23 @@ function areYouPlayingBanjo(name){
   }
 }
 
- 
+ Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
 
-Given a string of digits, 
-you should replace any digit 
-below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
+invert([1,-2,3,-4,5]) == [-1,2,-3,4,-5]
 
-Note: input will never be an empty string
 
-//given a STRING of digits
-//replace any n > '5'  with '0'
-//replace any n <= '5' with '1'
-
+step 1// go through each number in the array using map() to create a new array
+step 2// multiply each number by -1
+step 3 // return the new array
 */
+
+function invert(array){
+  return array.map(num =>{
+    return num * 1
+  })
+}
+
+//rewritten with arrow function
+const invert = array => array.map(num => -num);
+
