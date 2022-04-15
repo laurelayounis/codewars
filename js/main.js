@@ -525,7 +525,7 @@ invert([1,-2,3,-4,5]) == [-1,2,-3,4,-5]
 step 1// go through each number in the array using map() to create a new array
 step 2// multiply each number by -1
 step 3 // return the new array
-*/
+
 
 function invert(array){
   return array.map(num =>{
@@ -536,3 +536,27 @@ function invert(array){
 //rewritten with arrow function
 const invert = array => array.map(num => -num);
 
+
+Complete the solution so that it reverses all of the words within the string passed in.
+
+
+
+function reverseWords(str){
+  return str.split(' ').reverse().join(' ')
+}
+
+console.log(reverseWords("hello world!"))
+console.log(reverseWords("I love you"))
+
+
+*/
+
+function basicOp(operation, value1, value2){
+  if(operation == '+')return value1 + value2;
+  if(operation == '-')return value1 - value2;
+  if(operation == '*')return value1 * value2;
+  if(operation == '/')return value1 / value2;
+
+}
+
+basicOp('+', 4, 7)
