@@ -1903,6 +1903,3 @@ function shortcut (string) {
   
   }
 
-asfsa
-asdfsfdsgdgasfsaf
-sadfssfasf
