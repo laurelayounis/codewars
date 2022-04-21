@@ -549,7 +549,11 @@ console.log(reverseWords("hello world!"))
 console.log(reverseWords("I love you"))
 
 
-*/
+Your task is to create a function that does four basic mathematical operations.
+
+The function should take three arguments - operation(string/char), value1(number), value2(number).
+The function should return result of numbers after applying the chosen operation.
+
 
 function basicOp(operation, value1, value2){
   if(operation == '+')return value1 + value2;
@@ -560,3 +564,279 @@ function basicOp(operation, value1, value2){
 }
 
 basicOp('+', 4, 7)
+
+
+Given a month as an integer from 1 to 12, return to which quarter of the year it belongs as an integer number.
+
+For example: month 2 (February), is part of the first quarter; month 6 (June), is part of the second quarter; and month 11 (November), is part of the fourth quarter.
+
+if (month >= 1 && month <= 3) {
+  return 1;
+} else if (month >= 4 && month <= 6) {
+  return 2;
+} else if (month >= 7 && month <= 9) {
+  return 3;
+} else {
+  return 4;
+}
+}
+
+
+I have a cat and a dog.
+
+I got them at the same time as kitten/puppy. That was humanYears years ago.
+
+Return their respective ages now as [humanYears,catYears,dogYears]
+
+NOTES:
+
+humanYears >= 1
+humanYears are whole numbers only
+Cat Years
+15 cat years for first year
++9 cat years for second year
++4 cat years for each year after that
+Dog Years
+15 dog years for first year
++9 dog years for second year
++5 dog years for each year after that
+
+
+var humanYearsCatYearsDogYears = function(y) {
+ if(y == 1) return [1,15,15]
+ if( y == 2) return [2,24,24]
+return [y, (y-2) * 4 + 24, (y-2) * 5 + 24]
+ }
+
+
+ other way to solve it
+
+ const humanYearsCatYearsDogYears = (humanYears) => {
+  let catYears = 0;
+  let dogYears = 0;
+  
+  for (let i = 1; i <= humanYears; i++) {
+    if (i === 1) {
+      catYears += 15;
+      dogYears += 15;
+    }
+    else if (i === 2) {
+      catYears += 9;
+      dogYears += 9;
+    }
+    else {
+      catYears += 4;
+      dogYears += 5;
+    }
+  }
+  return [humanYears,catYears,dogYears];
+}
+
+
+
+Make a program that filters a list of strings and returns a list with only your friends name in it.
+
+If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+
+Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+
+i.e.
+
+friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
+Note: keep the original order of the names in the output.
+
+function friend(friends){
+  //need a place to store real friends (a new array)
+  const realFriends= [];
+  //need to iterate over the friends arr that's being passed in
+  for(let i= 0 ; i > friends.length; i++){
+    const friend= friends[i]
+    // if friends length is 4 
+    if(friend.length === 4){
+    //need to push it into the real friends array
+    realFriends.push(friend)
+    }
+  }
+  
+  //return real friends array
+   return realFriends
+  
+}
+-----------can also solve the prob using forEach()
+
+function friend(friends){
+  const realFriends= []
+  friends.forEach(friend=>{
+    if(friend.length === 4){
+      realFriends.push(friend)
+    }
+  });
+  return realFriends
+}
+
+----------------can also solve the prob using filter()
+function friend(friends){
+  return friends.filter(friend=>{
+    if(friend.length ===4){
+      return true;
+    }
+    return false;
+  })
+}
+
+------------------------can make it even smaller using a bool with filter
+
+function friend(friends){
+  return friends.filter(friend=>{
+    return friend.length === 4
+  })
+}
+
+--------------------can make this into one line using fat arrow
+
+function friend(friends){
+  return friends.filter(friend => friend.length === 4)
+}
+
+Create a function finalGrade, which calculates the final grade of a student depending on two parameters: a grade for the exam and a number of completed projects.
+
+This function should take two arguments: exam - grade for exam (from 0 to 100); projects - number of completed projects (from 0 and above);
+
+This function should return a number (final grade). There are four types of final grades:
+
+100, if a grade for the exam is more than 90 or if a number of completed projects more than 10.
+90, if a grade for the exam is more than 75 and if a number of completed projects is minimum 5.
+75, if a grade for the exam is more than 50 and if a number of completed projects is minimum 2.
+0, in other cases
+Examples(Inputs-->Output):
+
+100, 12 --> 100
+99, 0 --> 100
+10, 15 --> 100
+
+85, 5 --> 90
+
+55, 3 --> 75
+
+55, 0 --> 0
+20, 2 --> 0
+
+
+function finalGrade (exam, projects) {
+  if(exam > 90 || projects > 10){
+    return 100
+  }else if ( exam > 75 && projects >= 5){
+    return 90
+  }else if( exam > 50 && projects >= 2){
+    return 75
+  } else {
+    return 0
+  }
+}
+
+--------another way to solve it
+function finalGrade (exam, projects) {
+  if(exam > 90 || projects > 10) return 100;
+  if(exam > 75 & projects >= 5) return 90;
+  if(exam > 50 & projects >= 2) return 75;
+  return 0;
+}
+
+This time no story, no theory. The examples below show you how to write function accum:
+
+Examples:
+accum("abcd") -> "A-Bb-Ccc-Dddd"
+accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+accum("cwAt") -> "C-Ww-Aaa-Tttt"
+The parameter of accum is a string which includes only letters from a..z and A..Z.
+
+function accum(input) {
+	// a place to store the result
+  let result= ''
+  //iterate over the string
+
+  for(let index = 0; index < input.length; index ++){
+    const currentLetter= input[index]
+
+    //append the current letter i+1 times to the string
+    const totalCount= index + 1
+    for(let counter= 0 ; counter < totalCount ; counter++){
+
+       //capitalize the first append
+      if( counter == 0){
+        result += currentLetter.toUpperCase()
+      } else {
+        result += currentLetter.toLowerCase()
+      }
+    }
+  //append a dash if its not the last
+  if( index != input.length -1){
+    result += '-'
+  }
+   
+  }
+  return result
+}
+
+-------------another way to solve 
+function accum(s) {
+  return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
+}
+
+
+Write a function that will check if two given characters are the same case.
+
+If either of the characters is not a letter, return -1
+If both characters are the same case, return 1
+If both characters are letters, but not the same case, return 0
+Examples
+'a' and 'g' returns 1
+
+'A' and 'C' returns 1
+
+'b' and 'G' returns 0
+
+'B' and 'g' returns 0
+
+'0' and '?' returns -1
+
+have to use regex for this solution
+*/
+//use regex to compare the uppper case first i.test() use ? to compare next case wrapped in number because true returns 1 and false returns 0 and also have a -1
+
+sameCase = (a,b) => /[a-z]/i.test(a) && /[a-z]/i.test(b) ? Number(/[a-z]/.test(a) == /[a-z]/.test(b)) : -1
+
+-----alternative way to solve 
+function sameCase(a, b){
+  // Am regex fiend, but trying to force myself not to use it
+  // If a character is not a letter then the cases will match each other
+  if (a.toLowerCase() === a.toUpperCase() || b.toLowerCase() === b.toUpperCase()) {
+    return -1;
+  }
+  return (a.toLowerCase() === a) === (b.toLowerCase() === b) ? 1 : 0;
+}
+-------------------
+Build a function that returns an array of integers from n to 1 where n>0.
+
+Example : n=5 --> [5,4,3,2,1]
+
+const reverseSeq = n => {
+  const result = [];
+  
+  for(let i = n; i > 0; i -= 1) {
+    result.push(i);
+  }
+  
+  return result;
+};
+
+-----------other way to solve
+const reverseSeq = n => {
+  let answer = [];          //intialize an array
+  
+  for (let i=n; i>0; i--){  //loop down from n to 1
+    answer.push(i);         //push each i to the answer array
+  }
+  
+  return answer;            //return answer;
+};
