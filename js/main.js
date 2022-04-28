@@ -840,3 +840,155 @@ const reverseSeq = n => {
   
   return answer;            //return answer;
 };
+
+--------------
+
+Write a function to split a string and convert it into an array of words.
+
+Examples (Input -> Output):
+* "Robin Singh" ==> ["Robin", "Singh"]
+
+* "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
+
+function stringToArray(string){
+  return string.split(' ');
+}
+
+--------------------------------------
+
+Given an array of integers.
+
+Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers. 0 is neither positive nor negative.
+
+If the input is an empty array or is null, return an empty array.
+
+Example
+For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
+
+
+
+function countPositivesSumNegatives(input) {
+  let positiveNums= 0
+  let negativeNums= 0
+  //check to see if e in the input are null or empty if so return empty arr
+  if ( input === null || input.length < 0){
+    return []
+  } else {
+    //check to see if num is positive or neg if pos push to pos nums if neg sum together and push to neg nums
+    input.forEach((num) => num > 0 ? positiveNums++ : negativeNums += num)
+  }
+  //return in the form of an arr positivenNums , negativeNums
+   return [positiveNums , negativeNums];
+}
+
+
+Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+
+Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
+
+Example:
+n= 5, m=5: 25
+n=-5, m=5:  0
+
+function paperwork(n,m) {
+  if(n < 0 || m < 0){
+    return 0
+  }else{
+  return (n * m);
+  }
+}
+
+
+function paperwork(n, m) {
+  return n < 0 || m < 0 ? 0 : n * m;
+}
+
+
+
+You take your son to the forest to see the monkeys. You know that there are a certain number there (n), but your son is too young to just appreciate the full number, he has to start counting them from 1.
+
+As a good parent, you will sit and count with him. Given the number (n), populate an array with all numbers up to and including that number, but excluding zero.
+
+For example:
+
+monkeyCount(10) // --> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+monkeyCount(1) // --> [1]
+
+const monkeyCount= n => {
+  let arr= []
+  for(let i =1; i <= n ; i++){
+    arr.push(i)
+  }
+    return arr
+  }
+
+
+  Return the number (count) of vowels in the given string.
+
+We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+The input string will only consist of lower case letters and/or spaces.
+
+function getCount(str) {
+  var vowelsCount = 0;
+  
+  const vowels= ['a','e','i','o','u']
+  for(let char of str){
+    if(vowels.includes(char)){
+     vowelsCount ++
+    }
+  }
+  
+  return vowelsCount;
+}
+
+
+function getCount(str) {
+  return str.split('').filter(c => "aeiouAEIOU".includes(c)).length;
+ }
+
+
+
+ Given an array of integers.
+
+Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers. 0 is neither positive nor negative.
+
+If the input is an empty array or is null, return an empty array.
+
+Example
+For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
+
+
+function countPositivesSumNegatives(input) {
+  let positiveNums = 0;
+  let negativeNums = 0;
+  if (input === null || input.length === 0) {
+    return [];
+  } else {
+    input.forEach((num) => num > 0 ? positiveNums++ : negativeNums += num);
+  }
+  return [positiveNums , negativeNums];
+}
+
+
+Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+Note: input will never be an empty string
+
+
+function fakeBin(x){
+  let ans = x.split('')
+  let result = [];
+  for (let i = 0; i < ans.length; i++) {
+      if (ans[i] < 5) {
+          result.push(0)
+      } else {
+          result.push(1)
+      }
+  }
+  return result.join("");
+}
+
+function fakeBin(x) {
+  return x.split('').map(n => n < 5 ? 0 : 1).join('');
+}
