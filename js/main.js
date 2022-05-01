@@ -801,7 +801,7 @@ Examples
 '0' and '?' returns -1
 
 have to use regex for this solution
-*/
+
 //use regex to compare the uppper case first i.test() use ? to compare next case wrapped in number because true returns 1 and false returns 0 and also have a -1
 
 sameCase = (a,b) => /[a-z]/i.test(a) && /[a-z]/i.test(b) ? Number(/[a-z]/.test(a) == /[a-z]/.test(b)) : -1
@@ -992,3 +992,45 @@ function fakeBin(x){
 function fakeBin(x) {
   return x.split('').map(n => n < 5 ? 0 : 1).join('');
 }
+
+
+Write function bmi that calculates body mass index (bmi = weight / height2).
+
+if bmi <= 18.5 return "Underweight"
+
+if bmi <= 25.0 return "Normal"
+
+if bmi <= 30.0 return "Overweight"
+
+if bmi > 30 return "Obese"
+
+
+
+*/
+
+
+
+function bmi (weight, height){
+  let totalbmi= (weight) / (height * height)
+  if(totalbmi <= 18.5){
+    console.log("Underweight")
+  } else if (totalbmi <= 25.0){
+    console.log("Normal")
+  } else if( totalbmi <= 30.0){
+    console.log("Overweight")
+  } else if(totalbmi > 30){
+    console.log("Obese")
+  }
+}
+
+bmi(80, 1.80)  //normal
+
+------------another solution-----------------
+
+function bmi(weight, height) {
+  
+  var bmi  = weight/(height*height);
+  
+   return bmi < 18.5 ? "Underweight" : bmi <=25 ? "Normal" : bmi <= 30 ? "Overweight" : "Obese";
+  
+  }
