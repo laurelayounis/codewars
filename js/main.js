@@ -1063,7 +1063,7 @@ function sumMix(x){
   return x.reduce((acc, c)=> acc + Number(c), 0)
   }
 
-  */
+  
 
 
   You're at the zoo... all the meerkats look weird. Something has gone terribly wrong - someone has gone and switched their heads and tails around!
@@ -1078,3 +1078,19 @@ function fixTheMeerkat(arr) {
   //your code here 
    return arr.reverse()
  }
+
+
+ Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+
+Example:
+
+["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+
+None of the arrays will be empty, so you don't have to worry about that!
+ */
+function removeEveryOther(arr){
+  return arr.filter((n, idx) => idx % 2 === 0);
+}
+
+
+const removeEveryOther = arr => arr.filter((item, i) =>  i % 2 == 0);
