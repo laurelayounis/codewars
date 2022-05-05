@@ -1087,10 +1087,53 @@ Example:
 ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
 
 None of the arrays will be empty, so you don't have to worry about that!
- */
+
 function removeEveryOther(arr){
   return arr.filter((n, idx) => idx % 2 === 0);
 }
 
 
 const removeEveryOther = arr => arr.filter((item, i) =>  i % 2 == 0);
+
+*/
+
+Who remembers back to their time in the schoolyard, when girls would take a flower and tear its petals, saying each of the following phrases each time a petal was torn:
+
+I love you
+a little
+a lot
+passionately
+madly
+not at all
+When the last petal was torn there were cries of excitement, dreams, surging thoughts and emotions.
+
+Your goal in this kata is to determine which phrase the girls would say for a flower of a given number of petals, where nb_petals > 0.
+
+function howMuchILoveYou(nbPetals) {
+  let phrase = {    
+    0: "not at all",
+    1: "I love you",
+    2: "a little",
+    3: "a lot",
+    4: "passionately",
+    5: "madly"
+  }
+  return phrase[nbPetals%6]
+}
+
+function howMuchILoveYou(nbPetals) {
+  switch ((nbPetals - 1) % 6) {
+      case 1:
+          return "a little";
+      case 2:
+          return "a lot";
+      case 3:
+          return "passionately";
+      case 4:
+          return "madly";
+      case 5:
+          return "not at all";
+      default:
+          return "I love you";
+  }
+}
