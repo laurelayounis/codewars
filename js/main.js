@@ -1144,3 +1144,63 @@ Implement a function which multiplies two numbers.
 const multiply = (a,b) => a*b;
 
 
+Given a non-negative integer, 3 for example,
+ return a string with a murmur: "1 sheep...2 sheep...3 sheep...". 
+Input will always be valid, i.e. no negative integers.
+
+var countSheep = function(num){
+//P : a number ; figured this out by using type of in console log
+console.log('this is num:', typeof num)
+//R an alpha numeric string
+//E (2), "1 sheep...2 sheep..."); === (3), "1 sheep...2 sheep...3 sheep...")
+//P build a for loop to count up to num and with every iteration we are going to 
+//use a template literal to return a concatenated string, prob going to use 
+//the += operator to add a new string every time or 
+}
+
+/*test it out with a console log to see what it returns*/
+var countSheep= function (num){
+for(let i=0 ; i <= num; i++){
+  console.log(`${i} sheep...`)
+}
+}
+
+//now we know we need to either create and empty arr or empty str to either concate or push the
+//iterations 
+
+let arrOfSheep= []
+for(let i=0 ; i <= num; i++){
+  console.log(`${i} sheep...`)
+
+}
+
+/*next step*/
+
+
+let arrOfSheep= []
+for(let i=0 ; i <= num; i++){
+  console.log(`${i} sheep...`)
+  let sheepCount= `${i} sheep...`
+  console.log('this is sheepCount', sheepCount)
+
+  
+}
+
+/*now we need to add the push() to push every iteration inside of the for loop into the new arr*/
+let arrayOfSheep= []
+for(let i= 1; i <= num, i++){
+  let sheepCount= `${i} sheep...`
+  arrOfSheep.push(sheepCount)
+}
+
+/*final solution*/
+
+var countSheep = function (num){
+  //your code here
+  let arrOfSheep= []
+  for(let i= 1; i <= num; i++){
+    let sheepCount= `${i} sheep...`
+    arrOfSheep.push(sheepCount)
+  }
+  return arrOfSheep.join('')
+}
