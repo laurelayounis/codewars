@@ -1301,3 +1301,37 @@ var max = function(list){
 }
 
 
+
+
+Your task is to create the functionisDivideBy (or is_divide_by) to check if an integer number is divisible by both integers a and b.
+
+
+function isDivideBy(number, a, b) {
+  // good luck
+  if(number % a === 0 && number % b === 0){
+    return true
+  } else {
+    return false
+  }
+}
+
+All of the animals are having a feast! Each animal is bringing one dish. There is just one rule: the dish must start and end with the same letters as the animal's name. For example, the great blue heron is bringing garlic naan and the chickadee is bringing chocolate cake.
+
+Write a function feast that takes the animal's name and dish as arguments and returns true or false to indicate whether the beast is allowed to bring the dish to the feast.
+
+function feast(beast, dish) {
+  return beast[0]===dish[0] && beast.slice(-1)===dish.slice(-1);
+}
+
+
+Your coworker was supposed to write a simple helper function to capitalize a string (that contains a single word) before they went on vacation.
+
+Unfortunately, they have now left and the code they gave you doesn't work. Fix the helper function they wrote so that it works as intended (i.e. make the first character in the string "word" upper case).
+
+Don't worry about numbers, special characters, or non-string types being passed to the function. The string lengths will be from 1 character up to 10 characters, but will never be empty.
+
+function capitalizeWord(word) {
+  
+  return word[0].toUpperCase() + word.slice(1)
+
+}
