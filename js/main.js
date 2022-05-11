@@ -1285,7 +1285,7 @@ function bonusTime(salary, bonus) {
 function bonusTime(salary, bonus) {
   return bonus ? `£${10 * salary}` : `£${salary}`;
 }
-
+________________________________________________________________________________________
 
 Your task is to make two functions (max and min, or maximum and minimum, etc., depending on the language) that receive a list of integers as input and return, respectively, the largest and lowest number in that list.
 
