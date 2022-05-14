@@ -1384,3 +1384,28 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
   return distanceToPump/mpg <= fuelLeft
 };
+
+
+The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per second, rounded down to the integer (= floored).
+
+For example:
+
+1.08 --> 30
+Note! The input is a Real number (actual type is language dependent) and is >= 0. The result should be an Integer.
+
+
+
+function cockroachSpeed(s) {
+  //Good Luck!
+  //P: number, whole number, always be positive
+  //R: the input which is km per hour returned as cm per second then rounded down 
+  //E: 1.08  will return 30
+  //R: return whole num
+  //need to start with conversion of km per hour to cm per seconds 
+  let convertedKM= (1 / .036) * s
+  console.log(Math.floor(convertedKM))
+  return Math.floor(convertedKM)
+}
+
+
+const cockroachSpeed = s => Math.floor(s / 0.036);
