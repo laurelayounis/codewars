@@ -1335,3 +1335,52 @@ function capitalizeWord(word) {
   return word[0].toUpperCase() + word.slice(1)
 
 }
+
+
+Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+function removeExclamationMarks(s) {
+  s = s.split('')
+  console.log(s)
+  
+  const filtered= s.filter((x)=> {
+    return !x.includes('!')
+  })
+    
+  console.log(filtered)
+    
+  const newStr= filtered.join('')
+  
+  return newStr
+   
+  }
+
+
+  const removeExclamationMarks = (s) => {
+    return s.split('').filter((letter) => letter !== '!').join('')
+  }
+
+
+
+  You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left. Considering these factors, write a function that tells you if it is possible to get to the pump or not. Function should return true (1 in Prolog, NASM and COBOL) if it is possible and false
+
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  // TODO
+  //P numbers: always positive, whole 3 paras distance to pump, mpg, fuel left
+  //R bool: t or f
+  //E 50 miles to pump , 25 miles per gallon, true
+  //P disance to pump, avg is how many miles per gallon, how many gallons have left
+  // need to take the amt of mpg * fuelLeft save it to a var then compare this num to distance to pump 
+  let canWeMakeIt= mpg * fuelLeft
+  console.log(canWeMakeIt)
+  if(canWeMakeIt >= distanceToPump){
+    return true
+  } else {
+    return false
+  }
+};
+
+
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  return distanceToPump/mpg <= fuelLeft
+};
