@@ -1423,7 +1423,7 @@ function filter_list(l) {
   })
 }
 
-
+________________________________________________________________________-
 
 Our football team finished the championship. The result of each match look like "x:y". Results of all matches are recorded in the collection.
 
