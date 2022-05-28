@@ -1408,7 +1408,7 @@ function cockroachSpeed(s) {
 
 
 const cockroachSpeed = s => Math.floor(s / 0.036);
-
+________________________________________________________________________________________________________________
 
 In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
 
@@ -1423,7 +1423,7 @@ function filter_list(l) {
   })
 }
 
-________________________________________________________________________-
+________________________________________________________________________
 
 Our football team finished the championship. The result of each match look like "x:y". Results of all matches are recorded in the collection.
 
