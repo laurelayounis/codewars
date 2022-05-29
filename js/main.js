@@ -1,5 +1,5 @@
 
-/*
+
 
 //Codewars JS 8kyu
 
@@ -15,10 +15,9 @@ evenOrOdd(20)
 
 //refactored with arrow function
 
-
-
-
 const evenOrOdd = n => (n % 2 === 0) ? 'even' : 'odd'
+
+__________________________________________________________________________________________________________________
 
 //Very simple, given an integer or a floating-point number, find its opposite.
 
