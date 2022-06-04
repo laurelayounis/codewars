@@ -1676,3 +1676,44 @@ P.S. Each array includes only integer numbers. Output is a number too.
 function arrayPlusArray(arr1, arr2) {
   return arr1.concat(arr2).reduce((acc,c)=> acc + c)
   }
+
+
+  ________________________________________________________________________
+
+  Rock Paper Scissors
+Let's play! You have to return which player won! In case of a draw return Draw!.
+
+Examples(Input1, Input2 --> Output):
+
+"scissors", "paper" --> "Player 1 won!"
+"scissors", "rock" --> "Player 2 won!"
+"paper", "paper" --> "Draw!"
+
+const rps = (p1, p2) => {
+  let winner= null
+  
+  switch(p1){
+      case "rock":
+      if(p2 === "scissors")
+      winner = 1;
+      else if (p2 === "paper")
+      winner = 2;
+      break;
+      case "paper":
+      if(p2 === "rock")
+      winner = 1;
+      else if (p2 === "scissors")
+      winner = 2;
+      break;
+      case "scissors":
+      if(p2 === "paper")
+      winner = 1;
+      else if (p2 === "rock")
+      winner = 2;
+      break; 
+  }
+  if (winner !== null)
+    return "Player " + winner + " won!"
+  
+     return "Draw!"
+};
