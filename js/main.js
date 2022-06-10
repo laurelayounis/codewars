@@ -1718,4 +1718,73 @@ const rps = (p1, p2) => {
      return "Draw!"
 };
 
-...
+_______________________________________
+Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
+
+For example (Input --> Output):
+
+39 --> 3 (because 3*9 = 27, 2*7 = 14, 1*4 = 4 and 4 has only one digit)
+999 --> 4 (because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2)
+4 --> 0 (because 4 is already a one-digit number)
+
+function persistence(num) {
+  let numbers = []
+  let persistence= 0
+  //convert to arr of integers
+    numbers = convert_to_array_of_integers(num);
+    //get the length of digits
+  let numbersLength= numbers.toString()
+    // While the length of digits of the number is greater than 1
+    while( numbersLength.length>1 ) {
+      // Multiply contents of the numbers array
+      product = numbers.reduce(function(a,b){return a*b;});
+  
+      // Convert num to array of numbers
+      numbers = convert_to_array_of_integers(product);
+  
+      // Get the length of digits of the new number
+      numbersLength = numbers.toString();
+  
+      // Increase persistence count
+      persistence++;
+    }
+  
+    return persistence;
+  }
+  
+  function convert_to_array_of_integers(num) {
+    var numbers = [];
+    let sNum = num.toString();
+  
+    for ( let i=0, len=sNum.length; i<len; i++ ) {
+      numbers.push(parseInt(sNum.charAt(i)));
+    }
+  
+    return numbers;
+  
+  }
+
+  _______________________________________
+
+  Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+
+Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
+
+Examples:
+
+Testing: [0, 0, 0, 1] ==> 1
+Testing: [0, 0, 1, 0] ==> 2
+Testing: [0, 1, 0, 1] ==> 5
+Testing: [1, 0, 0, 1] ==> 9
+Testing: [0, 0, 1, 0] ==> 2
+Testing: [0, 1, 1, 0] ==> 6
+Testing: [1, 1, 1, 1] ==> 15
+
+const binaryArrayToNumber = arr => {
+  return parseInt(arr.join(''),2);
+};
+
+_______________________________________
+
+
+
