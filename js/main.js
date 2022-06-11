@@ -1903,13 +1903,4 @@ function shortcut (string) {
   
   }
 
-
-dfsdfasfgsdag
-sdgsdgasadas
-sfasfsafsagassdfasdfdg
-sdgsdggasdfsdafasasdfsdfdfasdfssafsadff
-adfasgsagsgsgssffsfasfasgasdgadgsadga
-asfasgasgsgasdgasagasdgsgsdgsdfasdsafdsdaf
-asdfsfsasafsdafsfsafsdfagsadgadgasgasgasdgasasfdsafdg
-asgsadl'fkas'lfksgasgasgsadfsfdgdsfhsdfsfasf
-asdasgas
+asfsa
