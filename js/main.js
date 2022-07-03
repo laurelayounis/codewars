@@ -1901,3 +1901,5 @@ function shortcut (string) {
   return string.split('').filter(v => !vowels.includes(v)).join('')
   
   }
+
+ 
