@@ -1902,4 +1902,6 @@ function shortcut (string) {
   
   }
 
- asdfasfasldfhslakjdf
+ asfasfasfasfd
+ asfsdfasdfas
+ asdfasfda
