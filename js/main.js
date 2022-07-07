@@ -1886,6 +1886,7 @@ function getGrade (s1, s2, s3) {
 
 ____________________________
 
+
 Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
 
 Examples
@@ -1901,9 +1902,3 @@ function shortcut (string) {
   return string.split('').filter(v => !vowels.includes(v)).join('')
   
   }
-
- asfasfasfasfd
- asfsdfasdfas
- asdfasfda
- asdfasfsafdas
- a;lsjf;askjfd;lsajf;alsk
