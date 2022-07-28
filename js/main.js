@@ -1616,6 +1616,8 @@ function solution(number){
   return sum;
 }
 
+
+
 _____________________________________________________________
 You can print your name on a billboard ad. Find out how much it will cost you. Each letter has a default price of £30, but that can be different if you are given 2 parameters instead of 1.
 
@@ -1630,6 +1632,7 @@ function billboard(name, price = 30){
     return Math.imul(name.length, price);
   }
 } 
+
 
 
 ________________________________________________________________________
@@ -1786,3 +1789,20 @@ const binaryArrayToNumber = arr => {
 
 ____________________________
 
+Write a function named setAlarm which receives two parameters. The first parameter, employed, is true whenever you are employed and the second parameter, vacation is true whenever you are on vacation.
+
+The function should return true if you are employed and not on vacation (because these are the circumstances under which you need to set an alarm). It should return false otherwise. Examples:
+
+setAlarm(true, true) -> false
+setAlarm(false, true) -> false
+setAlarm(false, false) -> false
+setAlarm(true, false) -> true
+
+function setAlarm(employed, vacation){
+  if(employed === true && vacation === false){
+    return true
+  }else{
+    return false
+  }
+
+}
